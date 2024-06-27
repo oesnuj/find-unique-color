@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import "./fonts/BMHANNAPro.css";
 const GlobalStyle = createGlobalStyle`
 	html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,11 +27,12 @@ const GlobalStyle = createGlobalStyle`
 		display: block;
 	}
 	body {
+		overflow-x: hidden;
 		line-height: 1;
-		font-family: 'Gugi', cursive;
+		font-family: 'BMHANNAPro', cursive;
 	}
 	button {
-		font-family: 'Gugi', cursive;
+		font-family: 'BMHANNAPro', cursive;
 	}
 	ol, ul {
 		list-style: none;
