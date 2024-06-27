@@ -17,7 +17,7 @@ export const WaveOne = styled.div`
   width: 200vw;
   height: 200vw;
   margin-left: -100vw;
-  margin-top: -200vw;
+  margin-top: -203vw;
   border-radius: 40%;
   animation: ${waveAnimation} 16000ms infinite linear;
   opacity: 0.1;
@@ -31,7 +31,7 @@ export const WaveTwo = styled.div`
   width: 200vw;
   height: 200vw;
   margin-left: -100vw;
-  margin-top: -200vw;
+  margin-top: -203vw;
   border-radius: 40%;
   animation: ${waveAnimation} 13500ms infinite linear;
   opacity: 0.1;
@@ -45,7 +45,7 @@ export const WaveThree = styled.div`
   width: 200vw;
   height: 200vw;
   margin-left: -100vw;
-  margin-top: -200vw;
+  margin-top: -203vw;
   border-radius: 40%;
   animation: ${waveAnimation} 11000ms infinite linear;
   opacity: 0.1;
