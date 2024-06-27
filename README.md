@@ -10,9 +10,9 @@
 
 <br>
 
-## 🎨 Introduction  
+### 🎨 Introduction  
 
-간편하고 빠르게 즐길 수 있는 **웹기반 색찾기 미니게임**입니다.
+가볍게 즐길 수 있는 **다른 색 찾기 웹 미니게임**입니다.
 <br>
 스테이지마다 다른 색깔을 하나 찾아내면 되는 게임입니다.
 <br>
@@ -23,6 +23,6 @@
 <br>
 
 
-## 🗂 Stack
+### 🗂 Stack
 <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/><img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
 
