@@ -19,6 +19,9 @@ export const WaveOne = styled.div`
   margin-left: -100vw;
   margin-top: -200vw;
   border-radius: 40%;
+  animation: ${waveAnimation} 16000ms infinite linear;
+  opacity: 0.1;
+  background: #bd53e0;
 `;
 
 export const WaveTwo = styled.div`
