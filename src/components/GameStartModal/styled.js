@@ -33,10 +33,10 @@ export const Button = styled.button`
 `;
 
 export const StartButton = styled(Button)`
-  background-color: rgba(66, 73, 255, 1);
+  background-color: rgba(72, 209, 204, 1);
 
   :hover {
-    background-color: rgba(66, 73, 255, 0.5);
+    background-color: rgba(72, 209, 204, 0.5);
     cursor: pointer;
   }
 `;
