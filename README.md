@@ -1,7 +1,7 @@
 <!-- <img src="https://capsule-render.vercel.app/api?type=waving&color=B931FC&height=150&section=header&text=&fontSize=0" /> -->
 
 
-# 다른 색 찾기 게임
+# 다른 색깔 고르기!
 <p align="center">
   
 ![image](https://github.com/oesnuj/find-unique-color/assets/112786665/08d8acad-de2b-427b-b37a-8295bd5fc557)
