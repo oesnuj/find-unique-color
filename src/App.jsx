@@ -6,7 +6,7 @@ import { Home, Play } from './pages';
 import store from './utils/store';
 import { userNameState } from './recoil/auth';
 import { USER_NAME } from './constants';
-import RouteChangeTracker from "./util/RouteChangeTracker";
+import RouteChangeTracker from "./utils/RouteChangeTracker";
 
 function App() {
   const setUserName = useSetRecoilState(userNameState);
