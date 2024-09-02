@@ -6,10 +6,11 @@ import { Home, Play } from './pages';
 import store from './utils/store';
 import { userNameState } from './recoil/auth';
 import { USER_NAME } from './constants';
+import RouteChangeTracker from "./util/RouteChangeTracker";
 
 function App() {
   const setUserName = useSetRecoilState(userNameState);
-
+  RouteChangeTracker();
   useEffect(() => {
     const userName = store.getSessionStorage(USER_NAME);
     if (userName) setUserName(userName);
