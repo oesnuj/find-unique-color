@@ -29,7 +29,7 @@ function Home() {
     <Styled.Container>
       <Wave></Wave>
       <Styled.Title>다른 색깔 고르기</Styled.Title>
-      <Styled.SubTitle>Web Final Project</Styled.SubTitle>
+      <Styled.SubTitle>Wag mini game</Styled.SubTitle>
       <Styled.PlayButton onClick={onOpenModal}>게임 시작</Styled.PlayButton>
       <GameStartModal openModal={openModal} onCloseModal={onCloseModal} />
     </Styled.Container>
