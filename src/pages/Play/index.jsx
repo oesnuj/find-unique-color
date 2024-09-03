@@ -6,6 +6,7 @@ import useTimer from '../../hooks/useTimer';
 import usePoint from '../../hooks/usePoint';
 import useStage from '../../hooks/useStage';
 import { userNameState } from '../../recoil/auth';
+import { postRank } from '../../api/postRank';
 import * as Styled from './styled';
 
 function Play() {
@@ -42,14 +43,18 @@ function Play() {
     setModalOpen(true);
   }, []);
 
-  const onCloseModal = useCallback(() => {
+  const onCloseModal = useCallback(async () => {
     setModalOpen(false);
     resetStage();
     resetTimer();
     resetPoint();
     startTimer();
-  }, [resetPoint, resetStage, resetTimer, startTimer]);
-
+    try {
+      await postRank(userName, stage); // 점수 제출
+    } catch (error) {
+      console.error('Failed to submit score');
+    }
+  }, [resetPoint, resetStage, resetTimer, startTimer, stage, userName]);
   useEffect(() => {
     startTimer();
     return () => stopTimer();
