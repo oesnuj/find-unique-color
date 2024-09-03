@@ -25,12 +25,19 @@ function Home() {
     setModalOpen(false);
   }, []);
 
+  const onClickRank =() => {
+  
+    navigation('/rank');
+  }
+
+
   return (
     <Styled.Container>
       <Wave></Wave>
       <Styled.Title>다른 색깔 고르기</Styled.Title>
       <Styled.SubTitle>Wag Mini Game</Styled.SubTitle>
       <Styled.PlayButton onClick={onOpenModal}>게임 시작</Styled.PlayButton>
+      <Styled.RankButton onClick={onClickRank}>랭크 보기</Styled.RankButton>
       <GameStartModal openModal={openModal} onCloseModal={onCloseModal} />
     </Styled.Container>
   );
