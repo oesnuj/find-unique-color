@@ -23,7 +23,10 @@
 스테이지가 지날수록 색이 점점 찾기 어려워집니다!!
 <br>
 
-https://github.com/junghyeonsu/find-different-color 기반으로 만들었습니다!
+
+
+### 참고
+https://github.com/junghyeonsu/find-different-color
 <br>
 
 
