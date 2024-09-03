@@ -9,6 +9,7 @@ export const Container = styled.div`
   row-gap: 5px;
   width: 100vw;
   height: 100vh;
+  overflow: hidden; 
 `;
 
 export const Title = styled.h1`
@@ -35,6 +36,7 @@ export const PlayButton = styled.button`
   overflow: hidden;
   font-weight: bold;
   border-radius: 10px;
+  box-sizing: border-box; 
 
   &:hover {
     background-color: rgba(72, 209, 204, 0.8);
@@ -62,8 +64,19 @@ export const PlayButton = styled.button`
     width: 200%;
     height: 200%;
   }
-`;
 
+  @media (max-width: 768px) {
+    width: 260px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+`;
 
 export const RankButton = styled(PlayButton)`
   background-color: rgba(255, 165, 0, 1);

@@ -3,8 +3,7 @@ import { useRecoilValue } from 'recoil';
 import { useNavigate } from 'react-router-dom';
 
 import { userNameState } from '../../recoil/auth';
-import { GameStartModal } from '../../components';
-import {Wave} from '../../components';
+import { GameStartModal, Wave } from '../../components';
 import * as Styled from './styled';
 
 function Home() {
@@ -26,7 +25,6 @@ function Home() {
   }, []);
 
   const onClickRank =() => {
-  
     navigation('/rank');
   }
 
