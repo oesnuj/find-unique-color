@@ -8,7 +8,7 @@
 
 <p>
   
-[🎮 게임하러 가기!!](https://splendorous-conkies-8e58b1.netlify.app/)
+### [🔍 게임하러 가기!!](https://splendorous-conkies-8e58b1.netlify.app/)
 <br>
 
 
