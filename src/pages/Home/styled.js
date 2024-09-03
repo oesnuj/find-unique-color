@@ -65,3 +65,11 @@ export const PlayButton = styled.button`
 `;
 
 
+export const RankButton = styled(PlayButton)`
+  background-color: rgba(255, 165, 0, 1);
+  margin-top: 10px;
+
+  &:hover {
+    background-color: rgba(255, 165, 0, 0.8);
+  }
+`;
