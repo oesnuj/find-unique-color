@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 
-import { Home, Play } from './pages';
+import { Home, Play, Rank } from './pages';
 import store from './utils/store';
 import { userNameState } from './recoil/auth';
 import { USER_NAME } from './constants';
@@ -21,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/play" element={<Play />} />
+        <Route path="/rank" element={<Rank />} />
       </Routes>
     </>
   );
