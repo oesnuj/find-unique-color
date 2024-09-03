@@ -14,11 +14,25 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   font-size: 70px;
+   @media (max-width: 768px) {
+    font-size: 50px; 
+  }
+
+  @media (max-width: 480px) {
+    font-size: 35px; 
+  }
 `;
 
 export const SubTitle = styled.h2`
   font-size: 30px;
   color: rgba(0, 0, 0, 0.3);
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px; 
+  }
 `;
 
 export const PlayButton = styled.button`
@@ -66,7 +80,7 @@ export const PlayButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    width: 260px;
+    width: 260px; 
     height: 45px;
     font-size: 18px;
   }
