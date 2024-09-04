@@ -1,9 +1,8 @@
 import axios from 'axios';
 
 export function postRank(userName, stage) {
-  const response = axios.post('https://wwwag-backend.co.kr/ranking', {
-    userName,
-    stage,
+  axios.post('https://wwwag-backend.co.kr/ranking', {
+    nickname: userName,
+    stage : stage,
   });
-  return response.data;
 }
