@@ -38,20 +38,20 @@ export const RankingItem = styled.li`
 
 export const Rank = styled.span`
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: ${props => props.color || '#555'};
 `;
 
 export const Name = styled.span`
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #333;
-  font-weight: bold;
+  font-weight: semi-bold;
 `;
 
 export const StageRecord = styled.span`
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #666;
-  font-weight: bold;
+  font-weight: semi-bold;
 `;
 
 export const HomeButton = styled.button`
