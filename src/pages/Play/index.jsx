@@ -43,18 +43,14 @@ function Play() {
     setModalOpen(true);
   }, []);
 
-  const onCloseModal = useCallback(async () => {
+  const onCloseModal = useCallback(() => {
     setModalOpen(false);
     resetStage();
     resetTimer();
     resetPoint();
     startTimer();
-    try {
-      await postRank(userName, stage); // 점수 제출
-    } catch (error) {
-      console.error('Failed to submit score');
-    }
-  }, [resetPoint, resetStage, resetTimer, startTimer, stage, userName]);
+
+  }, [resetPoint, resetStage, resetTimer, startTimer]);
   useEffect(() => {
     startTimer();
     return () => stopTimer();
@@ -65,8 +61,18 @@ function Play() {
       stopTimer();
       onOpenModal();
       resetTimer();
+  
+      const submitScore = async () => {
+        try {
+          await postRank(userName, stage); 
+        } catch (error) {
+          console.error('Failed to submit score', error);
+        }
+      };
+  
+      submitScore();
     }
-  }, [onOpenModal, point, resetTimer, stage, stopTimer, time]);
+  }, [onOpenModal, resetTimer, stage, stopTimer, time, userName]);
 
   return (
     <Styled.Container>
