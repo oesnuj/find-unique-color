@@ -37,8 +37,8 @@ function Rank() {
             <Styled.Rank>
               {index < 3 ? ['🥇', '🥈', '🥉'][index] : index + 1}
             </Styled.Rank>
-            <Styled.Name>{item.name}</Styled.Name>
-            <Styled.StageRecord>{item.stageRecord}</Styled.StageRecord>
+            <Styled.Name>{item.nickname}</Styled.Name>
+            <Styled.StageRecord>{item.stage}</Styled.StageRecord>
           </Styled.RankingItem>
         ))}
       </Styled.RankingList>
