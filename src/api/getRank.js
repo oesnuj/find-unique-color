@@ -8,7 +8,6 @@ export const getRank = async (pageNumber = 0, pageSize = 10) => {
                 pageSize: pageSize
             }
         });
-        console.log('Rank data:', response.data);
         return response.data;
     } catch (error) {
         console.error('Error fetching rank data:', error.response ? error.response.data : error.message);
