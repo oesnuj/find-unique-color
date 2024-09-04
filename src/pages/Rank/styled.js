@@ -43,13 +43,15 @@ export const Rank = styled.span`
 `;
 
 export const Name = styled.span`
-  font-size: 1rem;
+  font-size: 2rem;
   color: #333;
+  font-weight: bold;
 `;
 
 export const StageRecord = styled.span`
-  font-size: 1rem;
+  font-size: 2rem;
   color: #666;
+  font-weight: bold;
 `;
 
 export const HomeButton = styled.button`
@@ -68,7 +70,7 @@ export const HomeButton = styled.button`
   font-weight: bold;
   border-radius: 10px;
   box-sizing: border-box; 
-
+  
   &:hover {
     background-color: rgba(72, 209, 204, 0.8);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
