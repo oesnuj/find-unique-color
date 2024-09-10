@@ -11,7 +11,7 @@ import * as Styled from './styled';
 
 function Play() {
   const [openModal, setModalOpen] = useState(false);
-  const [isGameOver, setIsGameOver] = useState(false); // 게임 오버 상태 추가
+  const [isGameOver, setIsGameOver] = useState(false); 
   const userName = useRecoilValue(userNameState);
 
   const {
@@ -67,7 +67,7 @@ function Play() {
       setIsGameOver(true);
       setTimeout(() => {
         onOpenModal();
-      }, 3000);
+      }, 5000);
       const submitScore = async () => {
         try {
           await postRank(userName, stage); 
