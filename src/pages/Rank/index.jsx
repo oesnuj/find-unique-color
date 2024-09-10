@@ -30,7 +30,7 @@ function Rank() {
 
   return (
     <Styled.RankingContainer>
-      <Styled.Title>Ranking</Styled.Title>
+      <Styled.Title>명예의 전당</Styled.Title>
       <Styled.RankingList>
         {rankData.map((item, index) => (
           <Styled.RankingItem key={index}>
