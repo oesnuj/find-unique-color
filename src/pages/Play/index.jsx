@@ -11,6 +11,7 @@ import * as Styled from './styled';
 
 function Play() {
   const [openModal, setModalOpen] = useState(false);
+  const [isGameOver, setIsGameOver] = useState(false); // 게임 오버 상태 추가
   const userName = useRecoilValue(userNameState);
 
   const {
@@ -30,14 +31,16 @@ function Play() {
   const { point, resetPoint, scorePoint } = usePoint();
 
   const handleAnswerCardClick = useCallback(() => {
+    if (isGameOver) return; 
     clearStage();
     resetTimer();
     scorePoint(stage, time);
-  }, [clearStage, resetTimer, scorePoint, stage, time]);
+  }, [clearStage, resetTimer, scorePoint, stage, time, isGameOver]);
 
   const handleWrongCardClick = useCallback(() => {
+    if (isGameOver) return;
     minusTime();
-  }, [minusTime]);
+  }, [minusTime, isGameOver]);
 
   const onOpenModal = useCallback(() => {
     setModalOpen(true);
@@ -49,8 +52,9 @@ function Play() {
     resetTimer();
     resetPoint();
     startTimer();
-
+    setIsGameOver(false); 
   }, [resetPoint, resetStage, resetTimer, startTimer]);
+
   useEffect(() => {
     startTimer();
     return () => stopTimer();
@@ -59,9 +63,11 @@ function Play() {
   useEffect(() => {
     if (time < 0) {
       stopTimer();
-      onOpenModal();
       resetTimer();
-  
+      setIsGameOver(true);
+      setTimeout(() => {
+        onOpenModal();
+      }, 5000);
       const submitScore = async () => {
         try {
           await postRank(userName, stage); 
@@ -69,7 +75,6 @@ function Play() {
           console.error('Failed to submit score', error);
         }
       };
-  
       submitScore();
     }
   }, [onOpenModal, resetTimer, stage, stopTimer, time, userName]);
@@ -82,6 +87,7 @@ function Play() {
         handleAnswerCardClick={handleAnswerCardClick}
         handleWrongCardClick={handleWrongCardClick}
         stage={stage}
+        isGameOver={isGameOver}
       />
       <Point point={point} />
       <Styled.UserName>
@@ -89,6 +95,9 @@ function Play() {
         <br />
         기록되고 있습니다!
       </Styled.UserName>
+      {isGameOver && (
+        <Styled.AnswerNotice>앗.. 이걸 놓치셨네요! 다시 해보세요</Styled.AnswerNotice>
+      )}
       <GameOverModal
         point={point}
         stage={stage}
