@@ -3,7 +3,7 @@ import { Card } from '..';
 import * as Styled from './styled';
 import { BOARD_SIZE } from '../../constants';
 
-function Board({ stage, handleAnswerCardClick, handleWrongCardClick } ){
+function Board({ stage, handleAnswerCardClick, handleWrongCardClick, isGameOver } ){
   const boardRow = useMemo(() => Math.round((stage + 0.5) / 2) + 1, [stage]);
   const cardAmount = useMemo(() => boardRow ** 2, [boardRow]);
   const cardSize = useMemo(() => BOARD_SIZE / (cardAmount / boardRow), [cardAmount, boardRow]);
@@ -29,7 +29,7 @@ function Board({ stage, handleAnswerCardClick, handleWrongCardClick } ){
       answer: `rgb(${pickAnswerColor(red)}, ${pickAnswerColor(green)}, ${pickAnswerColor(blue)})`,
     };
   }, [pickRandomColor, pickAnswerColor]);
-  
+
   const cards = useMemo(
     () =>
       Array.from({ length: cardAmount }, (_, index) => {
@@ -40,10 +40,11 @@ function Board({ stage, handleAnswerCardClick, handleWrongCardClick } ){
             color={isAnswerCard ? colors.answer : colors.wrong}
             size={cardSize}
             key={index}
+            flash={isAnswerCard && isGameOver}
           />
         );
       }),
-    [cardAmount, answerCardIndex, cardSize, colors, handleAnswerCardClick, handleWrongCardClick]
+    [cardAmount, answerCardIndex, cardSize, colors, handleAnswerCardClick, handleWrongCardClick, isGameOver]
   );
   
 
