@@ -1,11 +1,20 @@
 import styled, { css, keyframes } from 'styled-components';
 
 const flashAnimation = keyframes`
-  0%, 100% {
+  0% {
     opacity: 1;
+    transform: scale(1);
+    background-color: ${({ color }) => `${color}`};
   }
   50% {
-    opacity: 0;
+    opacity: 0.2;
+    transform: scale(1.1);
+    background-color: ${({ color }) => `${color}`};
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    background-color: ${({ color }) => `${color}`};
   }
 `;
 
