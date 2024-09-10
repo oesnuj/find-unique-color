@@ -29,36 +29,23 @@ function Board({ stage, handleAnswerCardClick, handleWrongCardClick } ){
       answer: `rgb(${pickAnswerColor(red)}, ${pickAnswerColor(green)}, ${pickAnswerColor(blue)})`,
     };
   }, [pickRandomColor, pickAnswerColor]);
-
+  
   const cards = useMemo(
     () =>
-      Array.from(Array(cardAmount), (_, index) =>
-        answerCardIndex === index ? (
+      Array.from({ length: cardAmount }, (_, index) => {
+        const isAnswerCard = index === answerCardIndex;
+        return (
           <Card
-            onClick={handleAnswerCardClick}
-            color={`${colors.answer}`}
+            onClick={isAnswerCard ? handleAnswerCardClick : handleWrongCardClick}
+            color={isAnswerCard ? colors.answer : colors.wrong}
             size={cardSize}
             key={index}
           />
-        ) : (
-          <Card
-            onClick={handleWrongCardClick}
-            color={`${colors.wrong}`}
-            size={cardSize}
-            key={index}
-          />
-        ),
-      ),
-    [
-      cardAmount,
-      answerCardIndex,
-      handleAnswerCardClick,
-      colors.answer,
-      colors.wrong,
-      cardSize,
-      handleWrongCardClick,
-    ],
+        );
+      }),
+    [cardAmount, answerCardIndex, cardSize, colors, handleAnswerCardClick, handleWrongCardClick]
   );
+  
 
   return <Styled.Board>{cards}</Styled.Board>;
 }
