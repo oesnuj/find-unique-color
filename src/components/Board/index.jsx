@@ -23,7 +23,7 @@ function Board({ stage, handleAnswerCardClick, handleWrongCardClick, isGameOver 
     const red = pickRandomColor();
     const green = pickRandomColor();
     const blue = pickRandomColor();
-    console.log('Generated Colors:', { red, green, blue });
+
     return {
       wrong: `rgb(${red}, ${green}, ${blue})`,
       answer: `rgb(${pickAnswerColor(red)}, ${pickAnswerColor(green)}, ${pickAnswerColor(blue)})`,
