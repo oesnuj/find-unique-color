@@ -67,7 +67,7 @@ function Play() {
       setIsGameOver(true);
       setTimeout(() => {
         onOpenModal();
-      }, 5000);
+      }, 3000);
       const submitScore = async () => {
         try {
           await postRank(userName, stage); 
