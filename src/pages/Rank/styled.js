@@ -13,13 +13,6 @@ export const Title = styled.h1`
   margin-bottom: 20px;
 `;
 
-export const RankingList = styled.ul`
-  list-style: none;
-  padding: 0;
-  width: 100%;
-  max-width: 400px;
-`;
-
 export const RankingItem = styled.li`
   display: flex;
   justify-content: space-between;
@@ -36,19 +29,69 @@ export const RankingItem = styled.li`
   }
 `;
 
+export const RankTitle = styled.span`
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  flex: 1;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: ${props => props.color || '#000'};
+`;
+
+export const NameTitle = styled.span`
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  flex: 2;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: ${props => props.color || '#000'};
+`;
+
+export const StageRecordTitle = styled.span`
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  flex: 1.5;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: ${props => props.color || '#000'};
+`;
+
+export const RankingList = styled.ul`
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  min-width:200px;
+  max-width: 800px;
+`;
+
 export const Rank = styled.span`
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  flex: 1;
   font-weight: bold;
   font-size: 1.5rem;
   color: ${props => props.color || '#555'};
 `;
 
 export const Name = styled.span`
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  flex: 2;
   font-size: 1.5rem;
   color: #333;
   font-weight: semi-bold;
 `;
 
 export const StageRecord = styled.span`
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  flex: 1.5;
   font-size: 1.5rem;
   color: #666;
   font-weight: semi-bold;
