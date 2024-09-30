@@ -70,7 +70,7 @@ function Play() {
       }, 5000);
       const submitScore = async () => {
         try {
-          await postRank(userName, stage); 
+          await postRank(userName, stage, point); 
         } catch (error) {
           console.error('Failed to submit score', error);
         }
