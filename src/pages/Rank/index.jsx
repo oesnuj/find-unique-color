@@ -32,6 +32,12 @@ function Rank() {
     <Styled.RankingContainer>
       <Styled.Title>명예의 전당</Styled.Title>
       <Styled.RankingList>
+      <Styled.RankingItem>
+        <Styled.RankTitle>순위</Styled.RankTitle>
+        <Styled.NameTitle>닉네임</Styled.NameTitle>
+        <Styled.StageRecordTitle>최종 단계</Styled.StageRecordTitle>
+        <Styled.StageRecordTitle>점수</Styled.StageRecordTitle>
+      </Styled.RankingItem>
         {rankData.map((item, index) => (
           <Styled.RankingItem key={index}>
             <Styled.Rank>
@@ -39,6 +45,7 @@ function Rank() {
             </Styled.Rank>
             <Styled.Name>{item.nickname}</Styled.Name>
             <Styled.StageRecord>{item.stage}</Styled.StageRecord>
+            <Styled.StageRecord>{item.score}</Styled.StageRecord>
           </Styled.RankingItem>
         ))}
       </Styled.RankingList>
